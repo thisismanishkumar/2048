@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# 2048 Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web-based implementation of the classic 2048 puzzle game, built using React for the frontend and a basic Node.js setup (though the Node.js part is not actively used for game logic in this client-side version).
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+2048 is a single-player sliding block puzzle game. The objective of the game is to slide numbered tiles on a grid to combine them to create a tile with the number 2048. The game continues even after reaching the 2048 tile, allowing players to aim for higher scores.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   Interactive 4x4 game board.
+-   Responsive tile movements using arrow keys.
+-   Score tracking (displays the highest tile value on the board).
+-   Game over detection.
+-   New game functionality.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup and Installation
 
-### `npm test`
+To get this project up and running on your local machine, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  **Clone the repository:**
+    ```bash
+    git clone git@github.com:thisismanishkumar/2048.git
+    # Or if using HTTPS:
+    # git clone https://github.com/thisismanishkumar/2048.git
+    ```
 
-### `npm run build`
+2.  **Navigate to the project directory:**
+    ```bash
+    cd 2048/2048-game
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Running the Game
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After installation, you can run the game in development mode:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will open the game in your default web browser at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   **React:** Frontend JavaScript library for building user interfaces.
+-   **Node.js:** JavaScript runtime (used for project setup and dependency management).
+-   **CSS:** For styling the game interface.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Game Rules
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   The game is played on a 4x4 grid.
+-   Each turn, a new tile (either 2 or 4) appears on an empty spot on the grid.
+-   Players use the arrow keys (Up, Down, Left, Right) to move all tiles in a chosen direction.
+-   When two tiles with the same number collide while moving, they merge into a single tile with the sum of their values (e.g., two 2s merge into a 4).
+-   Merged tiles cannot merge again in the same turn.
+-   The game ends when the grid is full, and no more moves are possible (i.e., no empty spaces and no adjacent tiles with the same value that can merge).
